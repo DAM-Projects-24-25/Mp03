@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+           minWidth="-Infinity" prefHeight="300.0" prefWidth="342.0"
+           xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="samso.duarte.pp_samso_duarte.controladors.FMostrarAutobus">
+
+    <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="306.0">
+         <children>
+            <TableView fx:id="TVPantalla" layoutX="7.0" layoutY="4.0" prefHeight="286.0" prefWidth="325.0" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

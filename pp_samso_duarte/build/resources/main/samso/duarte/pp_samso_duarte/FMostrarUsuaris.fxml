@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="samso.duarte.pp_samso_duarte.controladors.FMostrarUsuaris">
+    <children>
+
+        <!-- Cap de pàgina amb el títol i el botó de tancar -->
+        <HBox alignment="CENTER_LEFT" layoutX="0" layoutY="0" prefHeight="40.0" prefWidth="600.0" spacing="10.0" style="-fx-background-color: #f0f0f0; -fx-padding: 10;">
+            <children>
+                <Pane HBox.hgrow="ALWAYS">
+                    <children>
+                        <Text layoutX="235.0" layoutY="21.0" style="-fx-font-size: 18px;" text="Usuaris" />
+                    </children>
+                </Pane>
+            </children>
+        </HBox>
+
+        <!-- Taula per mostrar usuaris -->
+        <TableView fx:id="tableUsuaris" layoutX="20.0" layoutY="50.0" prefHeight="280.0" prefWidth="560.0">
+            <columns>
+                <TableColumn fx:id="colNom" prefWidth="140.0" text="Nom" />
+                <TableColumn fx:id="colCognom" prefWidth="140.0" text="Cognom" />
+                <TableColumn fx:id="colUsuari" prefWidth="140.0" text="Usuari" />
+                <TableColumn fx:id="colContrasenya" prefWidth="140.0" text="Contrasenya" />
+            </columns>
+        </TableView>
+
+
+        <!-- Botons per a modificar i eliminar usuaris a la part inferior -->
+        <HBox alignment="CENTER" layoutX="20.0" layoutY="380.0" prefWidth="560.0" spacing="10.0" style="-fx-padding: 10;">
+            <children>
+                <Button fx:id="bttnModificar" text="Modificar Usuari" onAction="#modificarUsuari"/>
+                <Button fx:id="bttnEliminar" text="Eliminar Usuari" onAction="#eliminarUsuari"/>
+            </children>
+        </HBox>
+
+        <!-- Peu de pàgina amb el checkbox i el hyperlink -->
+        <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="340.0" prefWidth="560.0" spacing="10.0" style="-fx-padding: 10;">
+            <children>
+                <CheckBox fx:id="checkAdmin" text="Administradors" />
+                <Pane HBox.hgrow="ALWAYS" />
+                <Hyperlink fx:id="linkRegistrar" onAction="#afegirUsuari" text="Afegir Usuaris" />
+            </children>
+        </HBox>
+
+    </children>
+</AnchorPane>

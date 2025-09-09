@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="256.0" prefWidth="222.0" xmlns="http://javafx.com/javafx/15.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="samso.duarte.pp_samso_duarte.controladors.FPrincipal">
+   <children>
+      <SplitPane dividerPositions="0.12992125984251968" orientation="VERTICAL" prefHeight="256.0" prefWidth="222.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="30.0" prefWidth="143.0">
+               <children>
+                  <MenuBar layoutY="2.0" prefHeight="29.0" prefWidth="220.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="   Taxi     ">
+                        <items>
+                          <MenuItem fx:id="MIAfegirTaxi" mnemonicParsing="false" onAction="#afegirTaxi" text="Afegir Taxi" />
+                              <MenuItem fx:id="MIMostrarTaxi" mnemonicParsing="false" onAction="#mostrarTaxi" text="Mostrar Taxi" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="     Autobus   ">
+                        <items>
+                          <MenuItem fx:id="MIAfegirAutobus" mnemonicParsing="false" onAction="#afegirAutobus" text="Afegir Autobus" />
+                              <MenuItem fx:id="MIMostrarAutor" mnemonicParsing="false" onAction="#mostarAutobus" text="Mostrar Autobus" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="223.0" prefWidth="218.0">
+               <children>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="9.0" layoutY="10.0">
+                     <image>
+                        <Image url="@images/fons.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
