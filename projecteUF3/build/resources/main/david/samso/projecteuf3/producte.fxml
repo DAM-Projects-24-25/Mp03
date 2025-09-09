@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="david.samso.projecteuf3.ProducteController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" stylesheets="@styles.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Entrada Producte">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="57.0" layoutY="36.0" prefHeight="15.0" prefWidth="86.0" text="Nom" />
+                        <Label layoutX="57.0" layoutY="93.0" prefHeight="15.0" prefWidth="86.0" text="Preu € " />
+                        <Label layoutX="57.0" layoutY="169.0" prefHeight="15.0" prefWidth="86.0" text="Descripcio" />
+                        <Label layoutX="300.0" layoutY="36.0" prefHeight="15.0" prefWidth="133.0" text="Data Caducitat" />
+                        <TextField fx:id="nomProducte" layoutX="45.0" layoutY="57.0" />
+                        <TextField fx:id="preuProducte" layoutX="45.0" layoutY="115.0" />
+                        <DatePicker fx:id="dataCaduPreu" layoutX="291.0" layoutY="57.0" />
+                        <Button fx:id="btnGuarda" layoutX="406.0" layoutY="240.0" mnemonicParsing="false" onAction="#registra_P" text="Guarda" />
+                        <TextArea fx:id="descPreu" layoutX="45.0" layoutY="204.0" prefHeight="96.0" prefWidth="200.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Sortida Producte">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnMostra" layoutX="139.0" layoutY="261.0" mnemonicParsing="false" onAction="#mostrarPoducte" text="Mostra" />
+                        <Button fx:id="btnElimina" layoutX="406.0" layoutY="159.0" mnemonicParsing="false" onAction="#eliminarProducte" text="Elimina" />
+                        <Label layoutX="392.0" layoutY="87.0" text="Nom Producte" />
+                        <TextField fx:id="cercaNomProducte" layoutX="386.0" layoutY="116.0" />
+                        <TextArea fx:id="textMostra" layoutX="49.0" layoutY="29.0" prefHeight="200.0" prefWidth="242.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

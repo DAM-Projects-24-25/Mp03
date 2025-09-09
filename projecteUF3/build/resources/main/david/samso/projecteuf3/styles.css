@@ -1,0 +1,21 @@
+
+.button {
+    -fx-background-color: LightSeaGreen;
+    -fx-text-fill: white;
+    -fx-font-family: Chilanka;
+}
+.text-field{
+    -fx-background-color: lightpink;
+}
+
+.label {
+    -fx-text-fill: DodgerBlue;
+    -fx-font-family: Chilanka;
+}
+
+.text-area{
+    -fx-background-color: lightpink;
+}
+
+
+

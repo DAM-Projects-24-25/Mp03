@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="david.samso.projecteuf3.AdminController">
+    <children>
+        <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Usuari">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="48.0" layoutY="41.0" prefHeight="15.0" prefWidth="74.0" text="Nom" />
+                                <Label layoutX="48.0" layoutY="112.0" prefHeight="15.0" prefWidth="74.0" text="Cognom" />
+                                <TextField fx:id="nomUsuari" layoutX="37.0" layoutY="69.0" />
+                                <TextField fx:id="cognomUsuari" layoutX="37.0" layoutY="143.0" />
+                                <Button fx:id="registreUsuariButton" layoutX="74.0" layoutY="194.0" mnemonicParsing="false" onAction="#registraUsuari" text="Registre" />
+                                <ScrollPane layoutX="285.0" layoutY="56.0" prefHeight="200.0" prefWidth="272.0">
+                                    <content>
+                                        <AnchorPane fx:id="panelUsuari" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <TextArea fx:id="textAreaUsuari" layoutX="3.0" prefHeight="200.0" prefWidth="259.0" />
+                                            </children></AnchorPane>
+                                    </content>
+                                </ScrollPane>
+                                <Button fx:id="mostraUsuariButton" layoutX="376.0" layoutY="285.0" mnemonicParsing="false" onAction="#mostraUsuaris" text="Mostra" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Administrador">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="47.0" layoutY="42.0" prefHeight="15.0" prefWidth="73.0" text="Nom" />
+                                <Label layoutX="47.0" layoutY="123.0" prefHeight="15.0" prefWidth="73.0" text="Cognom" />
+                                <TextField fx:id="nomAdmin" layoutX="35.0" layoutY="70.0" />
+                                <TextField fx:id="cognomAdmin" layoutX="35.0" layoutY="146.0" />
+                                <Button fx:id="registraAdminButton" layoutX="80.0" layoutY="196.0" mnemonicParsing="false" onAction="#registraAdmin" text="Registra" />
+                                <ScrollPane layoutX="289.0" layoutY="59.0" prefHeight="200.0" prefWidth="262.0">
+                                    <content>
+                                        <AnchorPane fx:id="panelAdmin" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <TextArea fx:id="textAreaAdmin" layoutX="6.0" prefHeight="200.0" prefWidth="238.0" />
+                                            </children></AnchorPane>
+                                    </content>
+                                </ScrollPane>
+                                <Button fx:id="mostraAdminButton" layoutX="389.0" layoutY="274.0" mnemonicParsing="false" onAction="#mostraAdmins" text="Mostra" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
