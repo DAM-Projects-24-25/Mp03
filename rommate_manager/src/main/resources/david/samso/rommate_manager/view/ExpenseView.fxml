@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="david.samso.rommate_manager.controllers.ExpenseController"
+      spacing="10" alignment="CENTER"
+      stylesheets="@../styles.css">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Gestió de Despeses" style="-fx-font-size: 18;" />
+    
+    <TableView fx:id="expenseTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" />
+            <TableColumn fx:id="descriptionColumn" text="Descripció" />
+            <TableColumn fx:id="amountColumn" text="Import" />
+            <TableColumn fx:id="dateColumn" text="Data" />
+        </columns>
+    </TableView>
+                // TODO: Implement update method in DAO
+
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="descriptionField" promptText="Descripció" />
+        <TextField fx:id="amountField" promptText="Import" />
+        <DatePicker fx:id="datePicker" promptText="Data" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="addButton" text="Afegir" onAction="#handleAdd" />
+        <Button fx:id="deleteButton" text="Eliminar" onAction="#handleDelete" />
+        <Button fx:id="updateButton" text="Actualitzar" onAction="#handleUpdate" />
+    </HBox>
+</VBox>

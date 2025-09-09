@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="david.samso.rommate_manager.controllers.TaskController"
+      spacing="10" alignment="CENTER"
+      stylesheets="@../styles.css">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Gestió de Tasques" style="-fx-font-size: 18;" />
+    
+    <TableView fx:id="taskTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" />
+            <TableColumn fx:id="titleColumn" text="Títol" />
+            <TableColumn fx:id="descriptionColumn" text="Descripció" />
+            <TableColumn fx:id="completedColumn" text="Completada" />
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="titleField" promptText="Títol" />
+        <TextArea fx:id="descriptionField" promptText="Descripció" />
+        <CheckBox fx:id="completedCheckBox" text="Completada" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="addButton" text="Afegir" onAction="#handleAdd" />
+        <Button fx:id="deleteButton" text="Eliminar" onAction="#handleDelete" />
+        <Button fx:id="updateButton" text="Actualitzar" onAction="#handleUpdate" />
+    </HBox>
+</VBox>

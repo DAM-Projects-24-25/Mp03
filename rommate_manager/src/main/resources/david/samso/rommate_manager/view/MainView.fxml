@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="david.samso.rommate_manager.controllers.MainController"
+            stylesheets="@../styles.css">
+
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+            <!-- Roommates -->
+            <Tab text="Roommates">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+                    <ListView fx:id="roommateListView" prefHeight="200" />
+                    <Button fx:id="addRoommateButton" text="Afegir Roommate" maxWidth="150" />
+                </VBox>
+            </Tab>
+
+
+            <!-- Apartaments -->
+            <Tab text="Apartaments">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+                    <ListView fx:id="apartmentListView" prefHeight="200" />
+                    <Button fx:id="addApartmentButton" text="Afegir Apartament" maxWidth="150" />
+                </VBox>
+            </Tab>
+
+            <!-- Despeses -->
+            <Tab text="Despeses">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+                    <ListView fx:id="expenseListView" prefHeight="200" />
+                    <Button fx:id="addExpenseButton" text="Afegir Despesa" maxWidth="150" />
+                </VBox>
+            </Tab>
+
+            <!-- Tasques -->
+            <Tab text="Tasques">
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+                    <ListView fx:id="taskListView" prefHeight="200" />
+                    <Button fx:id="addTaskButton" text="Afegir Tasca" maxWidth="150" />
+                </VBox>
+            </Tab>
+        </TabPane>
+    </center>
+
+</BorderPane>
